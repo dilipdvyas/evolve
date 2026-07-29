@@ -1,0 +1,51 @@
+/* =====================================================================
+   EVOLVE
+   Master Stylesheet
+   ===================================================================== */
+
+
+/* =====================================================================
+   CORE
+   ===================================================================== */
+
+@import url("./core/01-variables.css");
+@import url("./core/02-reset.css");
+@import url("./core/03-typography.css");
+@import url("./core/04-layout.css");
+
+
+/* =====================================================================
+   COMPONENTS
+   ===================================================================== */
+
+@import url("./components/01-buttons.css");
+@import url("./components/02-cards.css");
+@import url("./components/03-badges.css");
+@import url("./components/05-forms.css");
+@import url("./components/06-chips.css");
+@import url("./components/08-section-header.css");
+
+
+
+/* =====================================================================
+   SECTIONS
+   ===================================================================== */
+
+@import url("./sections/01-navbar.css");
+@import url("./sections/02-hero.css");
+@import url("./sections/04-evolution.css");
+@import url("./sections/05-expertise.css");
+@import url("./sections/06-projects.css");
+@import url("./sections/07-insights.css");
+@import url("./sections/08-contact.css");
+@import url("./sections/09-footer.css");
+@import url("./sections/10-blog.css");
+@import url("./sections/11-projects-gallery.css");
+
+
+/* =====================================================================
+   UTILITIES
+   ===================================================================== */
+
+@import url("./utilities/animations.css");
+@import url("./utilities/helpers.css");

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Dilip Vyas</title>
+
+    <meta name="description" content="Interactive enterprise projects portfolio with company and technology filters.">
+
+    <meta name="theme-color" content="#0F172A">
+
+    <link rel="icon" type="image/png" href="assets/images/dv.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+</header>
+
+<main class="projects-page" data-projects-page="true">
+
+    <section class="container projects-hero" data-animate>
+
+        <h1 class="projects-title">
+            Projects
+            <span>Portfolio</span>
+        </h1>
+    </section>
+
+    <section class="container projects-toolbar" aria-label="Project filters">
+
+        <div class="projects-toolbar-head">
+            <h2>Filter Projects</h2>
+            <p class="projects-count" data-projects-count>0 projects</p>
+        </div>
+
+        <div class="projects-filter-row">
+            <h3>Company</h3>
+            <div class="projects-filter-list" data-filter-target="company"></div>
+        </div>
+
+        <div class="projects-filter-row">
+            <h3>Technology</h3>
+            <div class="projects-filter-list" data-filter-target="technology"></div>
+        </div>
+
+    </section>
+
+    <section class="container projects-grid" data-projects-list aria-live="polite">
+
+    </section>
+
+</main>
+
+<script type="module" src="assets/js/main.js"></script>
+
+</body>
+
+</html>

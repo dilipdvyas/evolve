@@ -1,0 +1,279 @@
+/* ========================================================================
+   EVOLVE DESIGN SYSTEM
+   FILE        : 01-buttons.css
+   VERSION     : 2.0
+   STATUS      : FINAL
+   DESCRIPTION : Button Component Library
+   ======================================================================== */
+
+
+/* ==========================================================================
+   BASE BUTTON
+   ========================================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.75rem;
+
+    min-width:160px;
+
+    padding:0.95rem 1.75rem;
+
+    border:none;
+
+    border-radius:var(--radius-pill);
+
+    font-family:inherit;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    white-space:nowrap;
+
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        background-color var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base);
+
+}
+
+
+/* ==========================================================================
+   HOVER
+   ========================================================================== */
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ==========================================================================
+   ACTIVE
+   ========================================================================== */
+
+.btn:active{
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================================================
+   DISABLED
+   ========================================================================== */
+
+.btn:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+/* ==========================================================================
+   PRIMARY
+   ========================================================================== */
+
+.btn-primary{
+
+    color:#ffffff;
+
+    background:var(--gradient-primary);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.btn-primary:hover{
+
+    box-shadow:
+
+        var(--shadow-lg),
+
+        var(--glow-primary);
+
+}
+
+
+/* ==========================================================================
+   SECONDARY
+   ========================================================================== */
+
+.btn-secondary{
+
+    color:var(--color-text-primary);
+
+    background:#ffffff;
+
+    border:1px solid var(--color-border);
+
+}
+
+.btn-secondary:hover{
+
+    border-color:var(--color-primary);
+
+    color:var(--color-primary);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+/* ==========================================================================
+   GHOST
+   ========================================================================== */
+
+.btn-ghost{
+
+    color:var(--color-primary);
+
+    background:transparent;
+
+}
+
+.btn-ghost:hover{
+
+    background:rgba(109,40,217,.06);
+
+}
+
+
+/* ==========================================================================
+   TEXT BUTTON
+   ========================================================================== */
+
+.btn-text{
+
+    padding:0;
+
+    min-width:auto;
+
+    border-radius:0;
+
+    color:var(--color-primary);
+
+    background:none;
+
+}
+
+.btn-text:hover{
+
+    transform:none;
+
+    color:var(--color-primary-dark);
+
+}
+
+
+/* ==========================================================================
+   ICON BUTTON
+   ========================================================================== */
+
+.btn-icon{
+
+    width:48px;
+
+    height:48px;
+
+    min-width:48px;
+
+    padding:0;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    border:1px solid var(--color-border);
+
+}
+
+.btn-icon:hover{
+
+    color:var(--color-primary);
+
+    border-color:var(--color-primary);
+
+}
+
+
+/* ==========================================================================
+   SIZES
+   ========================================================================== */
+
+.btn-sm{
+
+    min-width:120px;
+
+    padding:.75rem 1.25rem;
+
+    font-size:.875rem;
+
+}
+
+.btn-lg{
+
+    min-width:190px;
+
+    padding:1.15rem 2.25rem;
+
+    font-size:1rem;
+
+}
+
+
+/* ==========================================================================
+   FULL WIDTH
+   ========================================================================== */
+
+.btn-block{
+
+    width:100%;
+
+}
+
+
+/* ==========================================================================
+   LOADING
+   ========================================================================== */
+
+.btn-loading{
+
+    pointer-events:none;
+
+    opacity:.75;
+
+}
+
+
+/* ==========================================================================
+   ICON
+   ========================================================================== */
+
+.btn svg{
+
+    width:18px;
+
+    height:18px;
+
+}

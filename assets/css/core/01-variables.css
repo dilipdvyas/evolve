@@ -1,0 +1,323 @@
+/* ========================================================================
+   EVOLVE DESIGN SYSTEM
+   FILE        : 01-variables.css
+   VERSION     : 2.0
+   STATUS      : FINAL
+   DESCRIPTION : Global Design Tokens
+   ======================================================================== */
+
+:root {
+
+    /* =====================================================================
+       BRAND COLORS
+       ===================================================================== */
+
+   --color-primary:#2563EB;
+   --color-primary-dark:#1D4ED8;
+   --color-primary-light:#DBEAFE;
+
+    --color-secondary: #2563EB;
+    --color-secondary-light: #60A5FA;
+    --color-secondary-dark: #1D4ED8;
+
+    --color-accent: #9333EA;
+
+    /* =====================================================================
+       BACKGROUND COLORS
+       ===================================================================== */
+
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #F8FAFC;
+    --color-bg-tertiary: #F1F5F9;
+    --color-bg-elevated: #FFFFFF;
+
+    --color-bg: #FFFFFF;
+    --color-bg-soft: #F8FAFC;
+    --color-surface: #FFFFFF;
+
+    /* =====================================================================
+       SURFACE COLORS
+       ===================================================================== */
+
+    --color-surface: #FFFFFF;
+    --color-surface-hover: #F8FAFC;
+    --color-surface-active: #EEF2FF;
+
+    /* =====================================================================
+       TEXT COLORS
+       ===================================================================== */
+
+    --color-text-primary: #0F172A;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748B;
+    --color-text-disabled: #94A3B8;
+    --color-text-white: #FFFFFF;
+
+    --color-heading: #111827;
+    --color-body: #4B5563;
+    --color-muted: #9CA3AF;
+
+    /* =====================================================================
+       BORDER COLORS
+       ===================================================================== */
+
+    --color-border:#E5E7EB;
+    --color-border-light: #F1F5F9;
+    --color-border-strong: #CBD5E1;
+
+    /* =====================================================================
+       STATUS COLORS
+       ===================================================================== */
+
+    --color-success:#10B981;
+    --color-warning: #F59E0B;
+    --color-danger: #DC2626;
+    --color-info: #2563EB;
+
+    /* =====================================================================
+       GRADIENTS
+       ===================================================================== */
+
+    --gradient-primary:
+        linear-gradient(
+            135deg,
+            #6D28D9,
+            #8B5CF6
+        );
+
+    --gradient-secondary:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #60A5FA
+        );
+
+    --gradient-hero:
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #F8FAFC
+        );
+
+    /* =====================================================================
+       TYPOGRAPHY
+       ===================================================================== */
+
+    --font-family-base:
+        "Plus Jakarta Sans",
+        "Inter",
+        sans-serif;
+
+    --font-family-heading:
+        "Plus Jakarta Sans",
+        sans-serif;
+
+    --font-family-mono:
+        "JetBrains Mono",
+        monospace;
+
+    /* =====================================================================
+       FONT WEIGHTS
+       ===================================================================== */
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* =====================================================================
+       FONT SIZES
+       ===================================================================== */
+
+    --fs-display-xl: clamp(4rem, 7vw, 6rem);
+    --fs-display-lg: clamp(3rem, 5vw, 4.5rem);
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.75rem;
+    --fs-h4: 1.50rem;
+    --fs-h5: 1.25rem;
+    --fs-h6: 1.125rem;
+
+    --fs-body-xl: 1.25rem;
+    --fs-body-lg: 1.125rem;
+    --fs-body: 1rem;
+    --fs-body-sm: .9375rem;
+
+    --fs-small: .875rem;
+    --fs-caption: .75rem;
+
+    /* =====================================================================
+       LINE HEIGHT
+       ===================================================================== */
+
+    --line-height-display: 1.05;
+    --line-height-heading: 1.20;
+    --line-height-body: 1.70;
+    --line-height-tight: 1.40;
+
+    /* =====================================================================
+       LETTER SPACING
+       ===================================================================== */
+
+    --letter-spacing-tight: -.04em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: .04em;
+
+    /* =====================================================================
+       SPACING SCALE
+       ===================================================================== */
+
+    --space-0: 0;
+
+    --space-1: .25rem;      /* 4px  */
+    --space-2: .50rem;      /* 8px  */
+    --space-3: .75rem;      /* 12px */
+    --space-4: 1rem;        /* 16px */
+    --space-5: 1.25rem;     /* 20px */
+    --space-6: 1.5rem;      /* 24px */
+    --space-8: 2rem;        /* 32px */
+    --space-10: 2.5rem;     /* 40px */
+    --space-12: 3rem;       /* 48px */
+    --space-16: 4rem;       /* 64px */
+    --space-20: 5rem;       /* 80px */
+    --space-24: 6rem;       /* 96px */
+    --space-32: 8rem;       /* 128px */
+
+    /* =====================================================================
+       BORDER RADIUS
+       ===================================================================== */
+
+--radius-sm:10px;
+
+--radius-md:16px;
+
+--radius-lg:24px;
+
+--radius-xl:32px;
+
+    /* =====================================================================
+       SHADOWS
+       ===================================================================== */
+
+--shadow-xs:0 1px 2px rgba(15,23,42,.04);
+
+--shadow-sm:0 4px 12px rgba(15,23,42,.06);
+
+--shadow-md:0 8px 24px rgba(15,23,42,.08);
+
+--shadow-lg:0 16px 48px rgba(15,23,42,.12);
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+--container:1280px;
+
+    /* =====================================================================
+       GLOW
+       ===================================================================== */
+
+    --glow-primary:
+        0 0 40px rgba(109,40,217,.18);
+
+    --glow-secondary:
+        0 0 40px rgba(37,99,235,.15);
+
+    /* =====================================================================
+       GLASS EFFECT
+       ===================================================================== */
+
+    --glass-bg: rgba(255,255,255,.72);
+    --glass-border: rgba(255,255,255,.85);
+    --glass-blur: blur(20px);
+
+    /* =====================================================================
+       TRANSITIONS
+       ===================================================================== */
+
+    --transition-fast: .20s ease;
+    --transition-base: .35s ease;
+    --transition-slow: .60s ease;
+
+    /* =====================================================================
+       MOTION
+       ===================================================================== */
+
+    --motion-distance-sm: 8px;
+    --motion-distance-md: 16px;
+    --motion-distance-lg: 24px;
+
+    --motion-scale: 1.03;
+
+    /* =====================================================================
+       LAYOUT
+       ===================================================================== */
+
+    --container-max-width: 1320px;
+    --container-padding: 1.5rem;
+
+    --section-spacing: 7rem;
+
+    --header-height: 80px;
+
+    /* =====================================================================
+       GRID
+       ===================================================================== */
+
+    --grid-columns: 12;
+    --grid-gap: 2rem;
+
+    /* =====================================================================
+       Z INDEX
+       ===================================================================== */
+
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+
+}
+
+:root {
+
+   --navbar-bg: rgba(255,255,255,.9);
+   --navbar-bg-scrolled: rgba(255,255,255,.97);
+   --navbar-border: rgba(226,232,240,.86);
+   --navbar-shadow: 0 12px 34px rgba(15,23,42,.08);
+
+}
+
+:root[data-theme="dark"] {
+
+   --color-bg-primary: #0b1220;
+   --color-bg-secondary: #111b2f;
+   --color-bg-tertiary: #1a263c;
+   --color-bg-elevated: #111b2f;
+
+   --color-bg: #0b1220;
+   --color-bg-soft: #111b2f;
+   --color-surface: #0f1a2d;
+   --color-surface-hover: #17243a;
+   --color-surface-active: #1b2d48;
+
+   --color-text-primary: #e2e8f0;
+   --color-text-secondary: #c7d2e5;
+   --color-text-muted: #93a4bf;
+   --color-text-disabled: #64748b;
+
+   --color-border: #2b3a53;
+   --color-border-light: #253247;
+   --color-border-strong: #334765;
+
+   --navbar-bg: rgba(10,17,30,.86);
+   --navbar-bg-scrolled: rgba(10,17,30,.95);
+   --navbar-border: rgba(51,65,85,.9);
+   --navbar-shadow: 0 12px 34px rgba(2,6,23,.45);
+
+}

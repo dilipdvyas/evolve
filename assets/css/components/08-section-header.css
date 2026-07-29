@@ -1,0 +1,235 @@
+/* ========================================================================
+   EVOLVE DESIGN SYSTEM
+   FILE        : 08-section-header.css
+   VERSION     : 2.0
+   STATUS      : FINAL
+   DESCRIPTION : Editorial Section Header
+   ======================================================================== */
+
+
+/* ==========================================================================
+   SECTION HEADER
+   ========================================================================== */
+
+.section-header{
+
+    max-width:900px;
+
+    margin:0 auto 5rem;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================================
+   EYEBROW
+   ========================================================================== */
+
+.section-eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    margin-bottom:1.25rem;
+
+    color:var(--color-primary);
+
+    font-size:.875rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.15em;
+
+}
+
+.section-eyebrow::before,
+
+.section-eyebrow::after{
+
+    content:"";
+
+    width:40px;
+
+    height:2px;
+
+    border-radius:999px;
+
+    background:var(--color-primary);
+
+}
+
+
+/* ==========================================================================
+   TITLE
+   ========================================================================== */
+
+.section-title{
+
+    margin-bottom:1.5rem;
+
+    font-size:clamp(2.2rem,4vw,3.75rem);
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    letter-spacing:-.05em;
+
+    color:var(--color-text-primary);
+
+}
+
+
+/* ==========================================================================
+   HIGHLIGHT
+   ========================================================================== */
+
+.section-title span{
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================================================
+   DESCRIPTION
+   ========================================================================== */
+
+.section-description{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    color:var(--color-text-secondary);
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+}
+
+
+/* ==========================================================================
+   DIVIDER
+   ========================================================================== */
+
+.section-divider{
+
+    width:90px;
+
+    height:5px;
+
+    margin:2rem auto 0;
+
+    border-radius:999px;
+
+    background:var(--gradient-primary);
+
+}
+
+
+/* ==========================================================================
+   LEFT ALIGN
+   ========================================================================== */
+
+.section-header-left{
+
+    text-align:left;
+
+    margin-inline:0;
+
+}
+
+.section-header-left .section-description{
+
+    margin-left:0;
+
+}
+
+.section-header-left .section-divider{
+
+    margin-left:0;
+
+}
+
+.section-header-left .section-eyebrow{
+
+    justify-content:flex-start;
+
+}
+
+
+/* ==========================================================================
+   COMPACT
+   ========================================================================== */
+
+.section-header-sm{
+
+    margin-bottom:3rem;
+
+}
+
+.section-header-sm .section-title{
+
+    font-size:2.5rem;
+
+}
+
+
+/* ==========================================================================
+   LARGE
+   ========================================================================== */
+
+.section-header-lg{
+
+    margin-bottom:6rem;
+
+}
+
+.section-header-lg .section-title{
+
+    font-size:4rem;
+
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media(max-width:768px){
+
+.section-header{
+
+margin-bottom:4rem;
+
+}
+
+.section-title{
+
+font-size:2.5rem;
+
+}
+
+.section-description{
+
+font-size:1rem;
+
+}
+
+.section-eyebrow::before,
+
+.section-eyebrow::after{
+
+width:24px;
+
+}
+
+}

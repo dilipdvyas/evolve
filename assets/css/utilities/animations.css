@@ -1,0 +1,56 @@
+.has-animations [data-animate],
+.has-animations .reveal{
+
+    opacity:0;
+
+    transform:translateY(24px);
+
+    transition:
+
+        opacity .65s ease,
+
+        transform .65s ease;
+
+}
+
+.has-animations [data-animate].is-visible,
+.has-animations .reveal.is-visible{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+.delay-100{
+
+    transition-delay:.08s;
+
+}
+
+.delay-200{
+
+    transition-delay:.16s;
+
+}
+
+.delay-300{
+
+    transition-delay:.24s;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .has-animations [data-animate],
+    .has-animations .reveal{
+
+        opacity:1;
+
+        transform:none;
+
+        transition:none;
+
+    }
+
+}

@@ -1,0 +1,524 @@
+{
+  "updatedAt": "2026-07-28",
+  "count": 45,
+  "projects": [
+    {
+      "srNo": "1.0",
+      "projectName": "FAMS ( Fixed Asset Management System )",
+      "from": "1992-12-01",
+      "to": "1993-02-28",
+      "domain": "Finance",
+      "organization": "Gujarat Ambuja Cements Ltd.",
+      "technology": [
+        "Ingres",
+        "FoxPro"
+      ]
+    },
+    {
+      "srNo": "1.1",
+      "projectName": "Support of FAMS",
+      "from": "1993-04-01",
+      "to": "1993-10-31",
+      "domain": "Finance",
+      "organization": "Gujarat Ambuja Cements Ltd.",
+      "technology": [
+        "Ingres",
+        "FoxPro"
+      ]
+    },
+    {
+      "srNo": "2.0",
+      "projectName": "PIMS ( Personnel Information Management System )",
+      "from": "1993-12-01",
+      "to": "1994-05-31",
+      "domain": "Human Resouce",
+      "organization": "Shree Digvijay Cement Co. Ltd.",
+      "technology": [
+        "Ingres",
+        "C++"
+      ]
+    },
+    {
+      "srNo": "2.1",
+      "projectName": "Support of PIMS",
+      "from": "1994-06-01",
+      "to": "1995-06-30",
+      "domain": "Human Resouce",
+      "organization": "Shree Digvijay Cement Co. Ltd.",
+      "technology": [
+        "Ingres",
+        "C++"
+      ]
+    },
+    {
+      "srNo": "3.0",
+      "projectName": "MMS ( Material Management System )",
+      "from": "1995-07-01",
+      "to": "1995-11-30",
+      "domain": "Supply Chain & Materials",
+      "organization": "Gujarar Sidhee Cement Ltd.",
+      "technology": [
+        "FoxPro"
+      ]
+    },
+    {
+      "srNo": "3.1",
+      "projectName": "Support of MMS",
+      "from": "1995-12-01",
+      "to": "1998-02-28",
+      "domain": "Supply Chain & Materials",
+      "organization": "Gujarar Sidhee Cement Ltd.",
+      "technology": [
+        "FoxPro"
+      ]
+    },
+    {
+      "srNo": "4.0",
+      "projectName": "TAMS ( Time Attendance Management System )",
+      "from": "1996-01-01",
+      "to": "1998-02-28",
+      "domain": "Human Resouce",
+      "organization": "Gujarar Sidhee Cement Ltd.",
+      "technology": [
+        "FoxPro"
+      ]
+    },
+    {
+      "srNo": "5.0",
+      "projectName": "SDTS  ( Sales & Dispatch Tracking System )",
+      "from": "1996-06-01",
+      "to": "1997-04-30",
+      "domain": "Supply Chain & Materials",
+      "organization": "Gujarar Sidhee Cement Ltd.",
+      "technology": [
+        "FoxPro"
+      ]
+    },
+    {
+      "srNo": "5.1",
+      "projectName": "Support of SDTS",
+      "from": "1997-04-01",
+      "to": "1998-02-28",
+      "domain": "Supply Chain & Materials",
+      "organization": "Gujarar Sidhee Cement Ltd.",
+      "technology": [
+        "FoxPro"
+      ]
+    },
+    {
+      "srNo": "6.0",
+      "projectName": "PMS ( Project Management System )",
+      "from": "1998-03-01",
+      "to": "1998-07-31",
+      "domain": "Finance",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Foxpro"
+      ]
+    },
+    {
+      "srNo": "7.0",
+      "projectName": "HRMS ( Human Resource Management System )",
+      "from": "1998-08-01",
+      "to": "1999-01-31",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "FoxPro",
+        "Visual Basic"
+      ]
+    },
+    {
+      "srNo": "7.1",
+      "projectName": "Support of HRMS",
+      "from": "1999-02-01",
+      "to": "2002-03-31",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "FoxPro",
+        "Visual Basic"
+      ]
+    },
+    {
+      "srNo": "8.0",
+      "projectName": "vcg.ril.com ( Voice Communication Group Portal )",
+      "from": "1999-01-01",
+      "to": "1999-02-28",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Visual FoxPro"
+      ]
+    },
+    {
+      "srNo": "8.1",
+      "projectName": "Support of VCG",
+      "from": "1999-03-01",
+      "to": "2002-03-31",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Visual FoxPro"
+      ]
+    },
+    {
+      "srNo": "8.2",
+      "projectName": "Rollout on another site",
+      "from": "2000-02-01",
+      "to": "2002-02-28",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Visual FoxPro"
+      ]
+    },
+    {
+      "srNo": "9.0",
+      "projectName": "hrss.ril.com ( Human Resource Support System )",
+      "from": "1999-01-01",
+      "to": "2000-05-31",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP"
+      ]
+    },
+    {
+      "srNo": "9.1",
+      "projectName": "Support of HRSS",
+      "from": "1999-06-01",
+      "to": "2002-02-01",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP"
+      ]
+    },
+    {
+      "srNo": "10.0",
+      "projectName": "RIM-CAF ( Reliance India Mobile - Customer Application Form )",
+      "from": "2000-05-01",
+      "to": "2000-07-31",
+      "domain": "CRM",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Visual Basic"
+      ]
+    },
+    {
+      "srNo": "10.1",
+      "projectName": "Support of RIM-CAF",
+      "from": "2000-08-01",
+      "to": "2001-07-31",
+      "domain": "CRM",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Visual Basic"
+      ]
+    },
+    {
+      "srNo": "11.0",
+      "projectName": "SAP HR 4.6 Implementation",
+      "from": "2001-08-01",
+      "to": "2002-02-28",
+      "domain": "SAP-HCM",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "SAP-HCM"
+      ]
+    },
+    {
+      "srNo": "12.0",
+      "projectName": "medical.ril.com ( Medical Data Management System )",
+      "from": "2002-03-01",
+      "to": "2002-08-31",
+      "domain": "Health Care",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "12.1",
+      "projectName": "Rollout on another site",
+      "from": "2002-09-01",
+      "to": "2003-10-31",
+      "domain": "Health Care",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "12.2",
+      "projectName": "Support of MDMS",
+      "from": "2003-11-01",
+      "to": "2004-12-01",
+      "domain": "Health Care",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "13.0",
+      "projectName": "bid.ril.com (Business Intelligent Dashboard)",
+      "from": "2005-04-01",
+      "to": "2005-10-31",
+      "domain": "Business Analytics",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Java",
+        "JSP",  
+        "Servlets"
+      ]
+    },
+    {
+      "srNo": "14.0",
+      "projectName": "SAP-BI  (for SAP-HR) \u2013 Full Cycle Implementation",
+      "from": "2006-06-01",
+      "to": "2006-11-30",
+      "domain": "SAP-Business Intelligence",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "SAP-BI"
+      ]
+    },
+    {
+      "srNo": "15.0",
+      "projectName": "gsm.ril.com ( GSM Mobile Data Management System )",
+      "from": "2006-11-01",
+      "to": "2007-03-31",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "15.1",
+      "projectName": "Support of GSM",
+      "from": "2007-04-01",
+      "to": "2009-06-01",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "16.0",
+      "projectName": "DMS ( Documentation Management System )",
+      "from": "2008-04-01",
+      "to": "2008-05-01",
+      "domain": "Supply Chain & Materials",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "16.1",
+      "projectName": "Support of DMS",
+      "from": "2008-06-01",
+      "to": "2009-06-01",
+      "domain": "Supply Chain & Materials",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "17.0",
+      "projectName": "SAP2SQL ( ETL to download data from SAP to SQL )",
+      "from": "2006-12-01",
+      "to": "2007-02-28",
+      "domain": "Platform/Framework",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "18.0",
+      "projectName": "Email Alert for Operation Center",
+      "from": "2009-03-01",
+      "to": "2009-06-30",
+      "domain": "Platform/Framework",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "19.0",
+      "projectName": "Human Resource Information Dashboard ( hrid.ril.com )",
+      "from": "2009-07-01",
+      "to": "2009-11-30",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "19.1",
+      "projectName": "Support of HRID",
+      "from": "2009-12-01",
+      "to": "2012-12-01",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "20.0",
+      "projectName": "Gated Process Documentation",
+      "from": "2009-07-01",
+      "to": "2009-09-30",
+      "domain": "Supply Chain & Materials",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "21.0",
+      "projectName": "RARS (Reliance Attendnace Recording System)",
+      "from": "2010-04-01",
+      "to": "2010-06-30",
+      "domain": "Human Resouce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "22.0",
+      "projectName": "eCommerce Portals for Reliance Ind. Ltd",
+      "from": "2011-01-01",
+      "to": "2011-12-01",
+      "domain": "eCommerce",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "ASP.NET"
+      ]
+    },
+    {
+      "srNo": "23.0",
+      "projectName": "MS BizTalk Implementation as EAI",
+      "from": "2011-01-01",
+      "to": "2014-12-01",
+      "domain": "Integration Platform",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "MS-Biztalk"
+      ]
+    },
+    {
+      "srNo": "24.0",
+      "projectName": "TIBCO Implememtatioin as a part of BT",
+      "from": "2012-01-01",
+      "to": "2019-12-01",
+      "domain": "Integration Platform",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "TIBCO"
+      ]
+    },
+    {
+      "srNo": "25.0",
+      "projectName": "Migration of TIBCO ( COTS Product ) to Open Source Software Platform",
+      "from": "2020-01-01",
+      "to": "2022-03-01",
+      "domain": "Integration Platform",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "TIBCO",
+        "Spring",
+        "k8s",
+        "Kafka"
+      ]
+    },
+    {
+      "srNo": "25.1",
+      "projectName": "Enhancement + Support of OSS Platform",
+      "from": "2022-04-01",
+      "to": "Till-Date",
+      "domain": "Integration Platform",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Spring",
+        "k8s",
+        "Kafka"
+      ]
+    },
+    {
+      "srNo": "26.0",
+      "projectName": "Implementation & Rollout of WSO2 API Manager & Identity Server for Business Platforms",
+      "from": "2018-04-01",
+      "to": "2022-06-01",
+      "domain": "API Gateay",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "WSO2",
+        "k8s"
+      ]
+    },
+    {
+      "srNo": "26.1",
+      "projectName": "Support + Upgrade + Rollout for new businesses",
+      "from": "2022-07-01",
+      "to": "Till-Date",
+      "domain": "API Gateay",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "WSO2",
+        "k8s"
+      ]
+    },
+    {
+      "srNo": "27.0",
+      "projectName": "Building & Managing the DevSecOps Practice for Hydrocarbon Business using Azure DevOps",
+      "from": "2018-04-01",
+      "to": "2022-06-01",
+      "domain": "DevSecOps",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Azure DevOps",
+        "k8s",
+        "Kafka",
+        "ELK"
+      ]
+    },
+    {
+      "srNo": "27.1",
+      "projectName": "Support + Upgrade + Rollout for new technologies",
+      "from": "2022-07-01",
+      "to": "Till-Date",
+      "domain": "DevSecOps",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Azure DevOps",
+        "k8s",
+        "Kafka",
+        "ELK"
+      ]
+    },
+    {
+      "srNo": "28.0",
+      "projectName": "AI in SDLC / MCP for Azure DevOps & Other COTS tools",
+      "from": "2026-01-01",
+      "to": "Till-Date",
+      "domain": "AI",
+      "organization": "Reliance Industries Ltd.",
+      "technology": [
+        "Python",
+        "Node",
+        "LLMs"
+      ]
+    }
+  ]
+}

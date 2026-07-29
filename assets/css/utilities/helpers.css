@@ -1,0 +1,102 @@
+:root[data-theme="dark"] body {
+
+	background: var(--color-bg-primary);
+	color: var(--color-text-primary);
+
+}
+
+:root[data-theme="light"] {
+
+	color-scheme: light;
+
+}
+
+:root[data-theme="dark"] {
+
+	color-scheme: dark;
+
+}
+
+:root[data-theme="dark"] .hero,
+:root[data-theme="dark"] .evolution-section,
+:root[data-theme="dark"] .expertise-section,
+:root[data-theme="dark"] .impact-section,
+:root[data-theme="dark"] .insights-section,
+:root[data-theme="dark"] .contact-section {
+
+	background: var(--color-bg-secondary);
+
+}
+
+:root[data-theme="dark"] .hero-description,
+:root[data-theme="dark"] .expertise-intro,
+:root[data-theme="dark"] .impact-intro,
+:root[data-theme="dark"] .insights-intro,
+:root[data-theme="dark"] .contact-intro,
+:root[data-theme="dark"] .timeline-content p,
+:root[data-theme="dark"] .impact-card p,
+:root[data-theme="dark"] .insight-card p,
+:root[data-theme="dark"] .expertise-card p {
+
+	color: var(--color-text-secondary);
+
+}
+
+:root[data-theme="dark"] .hero-title,
+:root[data-theme="dark"] .expertise-title,
+:root[data-theme="dark"] .impact-title,
+:root[data-theme="dark"] .insights-title,
+:root[data-theme="dark"] .contact-title,
+:root[data-theme="dark"] .timeline-content h3,
+:root[data-theme="dark"] .impact-card h3,
+:root[data-theme="dark"] .insight-card h3,
+:root[data-theme="dark"] .expertise-card h3 {
+
+	color: var(--color-text-primary);
+
+}
+
+:root[data-theme="dark"] .hero-actions .btn-secondary,
+:root[data-theme="dark"] .expertise-card,
+:root[data-theme="dark"] .impact-card,
+:root[data-theme="dark"] .impact-card--flip .impact-card-face,
+:root[data-theme="dark"] .insight-card,
+:root[data-theme="dark"] .contact-panel,
+:root[data-theme="dark"] .contact-content,
+:root[data-theme="dark"] .contact-card,
+:root[data-theme="dark"] .timeline-content,
+:root[data-theme="dark"] .nav-menu {
+
+	background: var(--color-surface);
+	border-color: var(--color-border);
+
+}
+
+:root[data-theme="dark"] .timeline::before {
+
+	background: linear-gradient(
+		to bottom,
+		rgba(96,165,250,.15),
+		rgba(96,165,250,.55),
+		rgba(96,165,250,.15)
+	);
+
+}
+
+:root[data-theme="dark"] .logo-subtitle,
+:root[data-theme="dark"] .nav-link,
+:root[data-theme="dark"] .metric-chip span,
+:root[data-theme="dark"] .contact-quick-points span,
+:root[data-theme="dark"] .impact-card li,
+:root[data-theme="dark"] .impact-flip-hint {
+
+	color: var(--color-text-muted);
+
+}
+
+:root[data-theme="dark"] .nav-link.active,
+:root[data-theme="dark"] .nav-link:hover {
+
+	color: #93c5fd;
+
+}
