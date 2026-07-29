@@ -169,6 +169,8 @@
 
     align-items:center;
 
+    overflow:visible;
+
 }
 
 .timeline-marker::before{
@@ -214,6 +216,10 @@
     font-weight:700;
 
     letter-spacing:.08em;
+
+    white-space:nowrap;
+
+    z-index:2;
 
 }
 
@@ -307,9 +313,15 @@ text-align:left !important;
 
 .timeline-year{
 
-left:34px;
+    left:50%;
 
-top:-2px;
+    transform:translateX(-50%);
+
+    top:-18px;
+
+    padding:6px 12px;
+
+    font-size:.78rem;
 
 }
 
