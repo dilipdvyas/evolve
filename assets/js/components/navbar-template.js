@@ -144,8 +144,6 @@ export const buildSharedNavbarMarkup = () => {
 
                 <span class="theme-icon" aria-hidden="true">◐</span>
 
-                <span class="theme-label">Dark Mode</span>
-
             </button>
 
             <!-- Mobile -->

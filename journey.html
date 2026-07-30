@@ -19,7 +19,129 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/main.css">
+<style>
+    @page {
+        size: A4;
+        margin: 20mm 15mm;
+        background-color: #f8fafc;
+    }
+    
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
 
+    body {
+        margin: 0;
+        padding: calc(20px + var(--header-height)) 20px 20px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #1e293b;
+        line-height: 1.6;
+        font-size: 11pt;
+        max-width: 850px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        border-radius: 8px;
+    }
+
+    .header-banner {
+        margin: -20px -20px 25px -20px;
+        padding: 40px 30px;
+        background-color: #0f172a;
+        color: #f8fafc;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .tag {
+        display: inline-block;
+        background-color: #38bdf8;
+        color: #0f172a;
+        font-size: 8.5pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 4px;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    h1 {
+        font-size: 24pt;
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+        color: #ffffff;
+    }
+
+    .author-line {
+        font-size: 10.5pt;
+        color: #94a3b8;
+    }
+
+    h2 {
+        font-size: 15pt;
+        color: #0f172a;
+        border-left: 4px solid #38bdf8;
+        padding-left: 10px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 12.5pt;
+        color: #0369a1;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+
+    .highlight-box {
+        background-color: #f1f5f9;
+        border-left: 4px solid #64748b;
+        padding: 15px;
+        margin: 20px 0;
+        font-style: italic;
+    }
+
+    .diagram-container {
+        display: block;
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+    }
+
+    .diagram-caption {
+        font-size: 9.5pt;
+        color: #64748b;
+        margin-top: 12px;
+        font-style: italic;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 15px;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    .math {
+        font-family: 'Times New Roman', serif;
+        font-style: italic;
+        font-weight: bold;
+        color: #0369a1;
+    }
+</style>
 </head>
 
 <body>
@@ -28,21 +150,12 @@
 
 </header>
 
-<main class="blog-article-main">
+<div class="header-banner">
+    <span class="tag">About / Full Journey</span> <span class="dot">•</span> July - 2026.
+    <h1>From FoxPro to AI : My Journey of Learning, Unlearning & Moving Forward</h1>
+    <div class="author-line">Reinvention has been the constant in my career. Across decades of technology shifts and business-critical delivery, I learned that adaptability is a stronger advantage than comfort.</div>
+</div>
 
-    <div class="container">
-
-        <article class="blog-article-wrap">
-
-            <a href="index.html#evolution" class="blog-breadcrumb">About / Full Journey</a>
-
-            <h1 class="blog-article-title">From FoxPro to AI : My Journey of Learning, Unlearning & Moving Forward</h1>
-
-            <p class="blog-article-subtitle">
-                Reinvention has been the constant in my career. Across decades of technology shifts and business-critical delivery, I learned that adaptability is a stronger advantage than comfort.
-            </p>
-
-            <p class="blog-article-meta">Dilip Vyas · Enterprise Integration, Architecture, And DevSecOps Leadership</p>
 
             <div class="blog-article-content">
 
@@ -57,18 +170,18 @@
                     •	.NET → Java → SAP BIW<BR>
                     •	MS BizTalk → TIBCO → SAP PI<BR>
                     •	Open-Source Stacks → DevSecOps → API Management<BR>
-                    •	Monolithic → 2 tier (Client-Server) → 3 tier (Client-App-DB) → <BR>   n tier (Micro UI- Caching-Micro Services-Messaging-DB)<br>
+                    •	Monolithic → 2 tier (Client-Server) → 3 tier (Client-App-DB) → <BR>   n tier (Micro UI- Caching-Micro Services-Messaging-DB)<br><br>
                     Each shift wasn’t just about learning a new tool — it was about letting go of old mindsets, breaking habits, and relearning how to think differently. I had no mentor, no playbook. Just curiosity, persistence, and the belief that adaptability is the real skill.
                 </p>
 
                 <h2>Learning Across Domains & People</h2>
 
                 <p>
-                    Technology becomes meaningful only when applied to real problems. I’ve had the privilege to work across multiple domains:<br>
+                    Technology becomes meaningful only when applied to real problems. I’ve had the privilege to work across multiple domains:<br><br>
                     •	Employee Life Cycle & Administration – understanding people and organizations<br>
                     •	Finance & Material Management – precision, compliance, and accountability<br>
                     •	Manufacturing & Supply Chain – efficiency at scale<br>
-                    •	Healthcare – technology where uptime means saving lives<br>
+                    •	Healthcare – technology where uptime means saving lives<br><br>
                     Every domain came with new challenges and new people to work with. I learned that success comes not just from mastering technology, but from collaborating with diverse teams, mindsets, and cultures.
                 </p>
 
@@ -76,6 +189,7 @@
                 <h2>Resilience in Crisis: The Show Must Go On</h2>
                 <p>
                     My career was shaped as much by disasters as by technologies:<br>
+                    •	1996 Flood at Veaval – First ever experience of natural calamities<br>
                     •	1998 Cyclone at Jamnagar – systems had to stay alive despite chaos<br>
                     •	2001 Earthquake in Jamnagar – fear everywhere, but work still needed to continue<br>
                     •	2005 Flood in Mumbai – wading through submerged roads but ensuring deadlines were met<br>
@@ -119,12 +233,6 @@
             <div class="blog-article-footer">
                 <a href="index.html#evolution" class="btn btn-secondary">Back To Journey Timeline</a>
             </div>
-
-        </article>
-
-    </div>
-
-</main>
 
 <script type="module" src="assets/js/main.js"></script>
 

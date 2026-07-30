@@ -36,7 +36,6 @@ const applyTheme = (theme) => {
 
     const isDark = theme === "dark";
     const icon = toggle.querySelector(".theme-icon");
-    const label = toggle.querySelector(".theme-label");
     const switchingToTheme = isDark ? "light" : "dark";
 
     toggle.setAttribute("aria-pressed", String(isDark));
@@ -44,10 +43,6 @@ const applyTheme = (theme) => {
 
     if (icon) {
         icon.textContent = switchingToTheme === "dark" ? "◐" : "☀";
-    }
-
-    if (label) {
-        label.textContent = switchingToTheme === "dark" ? "Dark Mode" : "Light Mode";
     }
 
 };
