@@ -11,8 +11,6 @@ export class App {
 
     static async init() {
 
-        console.log("Starting EVOLVE...");
-
         // Load all JSON data
         await Promise.all([
 
@@ -20,8 +18,6 @@ export class App {
             DataService.load("social")
 
         ]);
-
-        console.log("Data Loaded");
 
         // Create Component Manager
         const manager = new ComponentManager();

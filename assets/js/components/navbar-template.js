@@ -54,7 +54,7 @@ const buildLink = (sectionId) => {
 
 };
 
-export const buildSharedNavbarMarkup = () => {
+const buildSharedNavbarMarkup = () => {
 
     const prefix = getPrefix();
 

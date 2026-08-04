@@ -363,75 +363,6 @@ const initEvolutionAutoScroll = () => {
 
 };
 
-const initScheduleBooking = () => {
-
-    const embedContainer = document.querySelector("[data-cal-embed]");
-
-    if (!embedContainer) {
-        return;
-    }
-
-    const calLink = (embedContainer.getAttribute("data-cal-link") || "").trim();
-
-    if (!calLink) {
-        return;
-    }
-
-    const namespace = (embedContainer.getAttribute("data-cal-namespace") || "strategy-call").trim();
-    const layout = (embedContainer.getAttribute("data-cal-layout") || "month_view").trim();
-
-    const mountInlineCalendar = () => {
-
-        if (typeof window.Cal !== "function") {
-            return;
-        }
-
-        window.Cal("init", namespace, { origin: "https://cal.com" });
-
-        const calNamespace = window.Cal.ns?.[namespace];
-
-        if (typeof calNamespace !== "function") {
-            return;
-        }
-
-        calNamespace("inline", {
-            elementOrSelector: "#cal-booking-inline",
-            calLink
-        });
-
-        calNamespace("ui", {
-            theme: "light",
-            hideEventTypeDetails: false,
-            layout
-        });
-
-    };
-
-    if (typeof window.Cal === "function") {
-        mountInlineCalendar();
-        return;
-    }
-
-    const existingScript = document.querySelector("script[data-cal-embed-script='true']");
-
-    if (existingScript) {
-        existingScript.addEventListener("load", mountInlineCalendar, { once: true });
-        return;
-    }
-
-    const script = document.createElement("script");
-
-    script.src = "https://app.cal.com/embed/embed.js";
-    script.async = true;
-    script.dataset.calEmbedScript = "true";
-    script.addEventListener("load", mountInlineCalendar, { once: true });
-
-    document.head.appendChild(script);
-
-};
-
-window.__toggleTheme = toggleThemeState;
-
 window.addEventListener(
 
     "DOMContentLoaded",
@@ -444,7 +375,6 @@ window.addEventListener(
         initImpactCardFlip();
         initEvolutionAutoScroll();
         await initProjectsGallery();
-        //initScheduleBooking();
 
         try {
             await App.init();
