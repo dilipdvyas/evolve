@@ -64,9 +64,14 @@ const getUniqueValues = (items, mapValue) => {
 const createProjectCard = (project) => {
 
     const technologies = Array.isArray(project.technology) ? project.technology : [];
+    const hasLink = project.link && project.link.trim();
+    const cardTag = hasLink ? `a` : `article`;
+    const cardAttrs = hasLink
+        ? `class="project-card project-card--linked" href="${project.link}" aria-label="Read more about ${project.projectName}"`
+        : `class="project-card"`;
 
     return `
-<article class="project-card">
+<${cardTag} ${cardAttrs}>
 
     <div class="project-card-head">
 
@@ -88,7 +93,7 @@ const createProjectCard = (project) => {
             : '<span class="project-tech">Legacy Stack</span>'}
     </div>
 
-</article>
+</${cardTag}>
     `;
 
 };

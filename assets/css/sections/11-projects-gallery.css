@@ -212,6 +212,23 @@
 
 }
 
+a.project-card--linked {
+
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+}
+
+a.project-card--linked:hover,
+a.project-card--linked:focus-visible {
+
+    outline: 2px solid rgba(37, 99, 235, 0.5);
+    outline-offset: 2px;
+
+}
+
 .project-card-head {
 
     display: flex;

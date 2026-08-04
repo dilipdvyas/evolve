@@ -486,6 +486,7 @@
       "to": "2022-06-01",
       "domain": "DevSecOps",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/devsecops-practice-azure-devops.html",
       "technology": [
         "Azure DevOps",
         "k8s",
