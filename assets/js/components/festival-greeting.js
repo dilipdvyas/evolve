@@ -31,6 +31,48 @@ const markGreetingSeen = () => {
 
 };
 
+const parseDateTime = (value) => {
+
+    if (!value) {
+        return null;
+    }
+
+    const parsed = new Date(value);
+
+    if (Number.isNaN(parsed.getTime())) {
+        return null;
+    }
+
+    return parsed;
+
+};
+
+const isFestivalGreetingActive = (greeting) => {
+
+    if (!greeting) {
+        return false;
+    }
+
+    const startDateTime = parseDateTime(greeting.startDateTime);
+    const endDateTime = parseDateTime(greeting.endDateTime);
+
+    if (startDateTime && endDateTime) {
+
+        const now = new Date();
+
+        return now >= startDateTime && now < endDateTime;
+
+    }
+
+    // Backwards-compatible fallback for older data-driven sites that still use a boolean.
+    if (typeof greeting.enabled === "boolean") {
+        return greeting.enabled;
+    }
+
+    return false;
+
+};
+
 const buildOverlay = (greeting) => {
 
     const overlay = document.createElement("div");
@@ -82,7 +124,7 @@ export const initFestivalGreeting = async () => {
     const siteData = await DataService.load("site");
     const greeting = siteData?.festivalGreeting;
 
-    if (!greeting?.enabled || !greeting.imagePath) {
+    if (!greeting?.imagePath || !isFestivalGreetingActive(greeting)) {
         return;
     }
 

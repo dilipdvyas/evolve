@@ -19,8 +19,9 @@
     "website":"",
 
     "festivalGreeting": {
-        "enabled": true,
         "durationMs": 3500,
+        "startDateTime": "2026-08-14T10:00:00",
+        "endDateTime": "2026-08-16T12:00:00",
         "imagePath": "assets/images/festivals/India_Independence_Day.jpeg",
         "imageAlt": "Decorative Independence Day greeting illustration",
         "eyebrow": "Festival greetings",
