@@ -21,7 +21,7 @@
     "festivalGreeting": {
         "enabled": true,
         "durationMs": 3500,
-        "imagePath": "assets/images/festivals/india_independence_day.jpeg",
+        "imagePath": "assets/images/festivals/India_Independence_Day.jpeg",
         "imageAlt": "Decorative Independence Day greeting illustration",
         "eyebrow": "Festival greetings",
         "heading": "Happy Independence Day!!",
