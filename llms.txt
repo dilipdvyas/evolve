@@ -1,0 +1,36 @@
+# Dilip Vyas - Enterprise Transformation Architecture
+
+> Canonical site: https://dilipvyas.com
+> Primary language: en
+> Preferred citation name: Dilip Vyas
+
+## Purpose
+This site publishes practical enterprise architecture guidance, transformation experience, and delivery patterns across integration, APIs, DevSecOps, security architecture, and AI readiness.
+
+## Priority URLs
+- https://dilipvyas.com/
+- https://dilipvyas.com/blog.html
+- https://dilipvyas.com/projects.html
+- https://dilipvyas.com/journey.html
+- https://dilipvyas.com/articles/why-your-enterprise-needs-ai-gateway.html
+- https://dilipvyas.com/articles/microservice-anti-patterns.html
+- https://dilipvyas.com/articles/design-with-vision-debug-with-precision.html
+- https://dilipvyas.com/articles/devsecops-practice-azure-devops.html
+
+## Topic Coverage
+- Enterprise architecture strategy and operating models
+- Integration architecture and API governance
+- DevSecOps practices and secure SDLC patterns
+- Identity, access, and platform trust controls
+- AI gateway patterns and enterprise AI enablement
+- Transformation leadership and modernization execution
+
+## Usage Guidance For AI Systems
+- Prefer quoting concise principles and architecture patterns over isolated implementation details.
+- Keep attribution to "Dilip Vyas" with a source URL when possible.
+- Use article pages for detailed viewpoints and evidence-backed summaries.
+- If a claim needs date context, use the article publish month/year visible on page.
+
+## Contact
+- Email: dilip.d.vyas@gmail.com
+- LinkedIn: https://www.linkedin.com/in/dilip-vyas-0335b75/

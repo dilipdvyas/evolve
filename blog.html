@@ -20,6 +20,87 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
 
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Blog",
+                    "@id": "https://dilipvyas.com/blog.html#blog",
+                    "url": "https://dilipvyas.com/blog.html",
+                    "name": "Dilip Vyas Blog",
+                    "description": "Strategic articles on enterprise architecture, integration, API governance, security architecture, and AI readiness.",
+                    "publisher": {
+                        "@type": "Person",
+                        "name": "Dilip Vyas",
+                        "url": "https://dilipvyas.com/"
+                    }
+                },
+                {
+                    "@type": "ItemList",
+                    "@id": "https://dilipvyas.com/blog.html#articles",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "url": "https://dilipvyas.com/journey.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "url": "https://dilipvyas.com/articles/design-with-vision-debug-with-precision.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "url": "https://dilipvyas.com/articles/microservice-anti-patterns.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "url": "https://dilipvyas.com/articles/why-your-enterprise-needs-ai-gateway.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 5,
+                            "url": "https://dilipvyas.com/articles/devsecops-practice-azure-devops.html"
+                        }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://dilipvyas.com/blog.html#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "What topics does this blog cover?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The blog covers enterprise architecture, integration, API programs, DevSecOps, security architecture, and AI gateway strategy."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Who should read these articles?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "CIOs, CTOs, enterprise architects, platform leaders, and engineering managers leading modernization programs."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Are the articles conceptual or practical?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "They are strategic but practical, with architecture patterns, operating guidance, and lessons learned from enterprise delivery."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+
 </head>
 
 <body>
@@ -95,6 +176,50 @@
                         <p class="blog-card-meta">10 min read</p>
                     </article>
                 </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="answers-section" aria-labelledby="blog-answers-title">
+
+        <div class="container">
+
+            <div class="answers-header" data-animate>
+
+                <span class="answers-tag">Reader Guide</span>
+
+                <h2 id="blog-answers-title" class="answers-title">What You Can Learn Here</h2>
+
+                <p class="answers-intro">
+                    These quick answers help readers and answer engines identify the best starting point based on modernization goals.
+                </p>
+
+            </div>
+
+            <div class="answers-grid">
+
+                <article class="answer-card" data-animate>
+                    <h3>Need AI governance guidance?</h3>
+                    <p>Start with the AI Gateway article to understand control planes for cost, resilience, and guardrails.</p>
+                </article>
+
+                <article class="answer-card" data-animate>
+                    <h3>Improving architecture decision quality?</h3>
+                    <p>Read Design with Vision. Debug with Precision for a practical framework on system-scale thinking and problem isolation.</p>
+                </article>
+
+                <article class="answer-card" data-animate>
+                    <h3>Fixing distributed system drift?</h3>
+                    <p>Review Microservice Anti-Patterns to identify common structural mistakes and recovery paths.</p>
+                </article>
+
+                <article class="answer-card" data-animate>
+                    <h3>Securing software delivery pipelines?</h3>
+                    <p>Read the DevSecOps practice article for actionable enterprise patterns in Azure DevOps-led SDLC control.</p>
+                </article>
 
             </div>
 

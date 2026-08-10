@@ -1,0 +1,131 @@
+/* ===========================================================
+   EVOLVE
+   ANSWER HUB (AEO)
+   =========================================================== */
+
+.answers-section {
+
+    position: relative;
+    padding: 74px 0;
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+
+}
+
+.answers-header {
+
+    max-width: 760px;
+    margin-bottom: 2rem;
+
+}
+
+.answers-tag {
+
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid rgba(29, 78, 216, 0.24);
+    border-radius: 999px;
+    color: #1d4ed8;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+}
+
+.answers-title {
+
+    margin-top: 0.95rem;
+    color: #0f172a;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2;
+
+}
+
+.answers-intro {
+
+    margin-top: 0.95rem;
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.72;
+
+}
+
+.answers-grid {
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+
+}
+
+.answer-card {
+
+    border: 1px solid #dbe6fb;
+    border-radius: 18px;
+    background: #ffffff;
+    padding: 1.2rem 1.15rem;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+
+}
+
+.answer-card h3 {
+
+    margin: 0 0 0.65rem;
+    color: #0f172a;
+    font-size: 1.02rem;
+    line-height: 1.4;
+
+}
+
+.answer-card p {
+
+    margin: 0;
+    color: #334155;
+    line-height: 1.62;
+
+}
+
+.answer-links {
+
+    margin-top: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+
+}
+
+.answer-links a {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    background: #eff6ff;
+
+}
+
+@media (max-width: 980px) {
+
+    .answers-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .answers-section {
+
+        padding: 62px 0;
+
+    }
+
+}

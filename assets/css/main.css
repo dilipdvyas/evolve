@@ -20,6 +20,7 @@
 
 @import url("./components/01-buttons.css");
 @import url("./components/02-cards.css");
+@import url("./components/03-festival-greeting.css");
 @import url("./components/08-section-header.css");
 
 
@@ -38,6 +39,7 @@
 @import url("./sections/09-footer.css");
 @import url("./sections/10-blog.css");
 @import url("./sections/11-projects-gallery.css");
+@import url("./sections/12-answers.css");
 
 
 /* =====================================================================

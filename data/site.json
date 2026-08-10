@@ -16,5 +16,15 @@
 
     "github":"",
 
-    "website":""
+    "website":"",
+
+    "festivalGreeting": {
+        "enabled": true,
+        "durationMs": 3500,
+        "imagePath": "assets/images/festivals/india_independence_day.jpeg",
+        "imageAlt": "Decorative Independence Day greeting illustration",
+        "eyebrow": "Festival greetings",
+        "heading": "Happy Independence Day!!",
+        "message": "Wishing you and your family light, joy, prosperity, and a season filled with warmth and celebration."
+    }
 }

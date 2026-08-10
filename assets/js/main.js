@@ -1,4 +1,5 @@
 import { App } from "./core/app.js";
+import { initFestivalGreeting } from "./components/festival-greeting.js";
 import { mountSharedNavbar } from "./components/navbar-template.js";
 import { initProjectsGallery } from "./components/projects-gallery.js";
 
@@ -372,6 +373,7 @@ window.addEventListener(
         mountSharedNavbar();
 
         initThemeToggle();
+        await initFestivalGreeting();
         initImpactCardFlip();
         initEvolutionAutoScroll();
         await initProjectsGallery();

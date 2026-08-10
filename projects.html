@@ -20,6 +20,56 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
 
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "CollectionPage",
+                    "@id": "https://dilipvyas.com/projects.html#page",
+                    "url": "https://dilipvyas.com/projects.html",
+                    "name": "Projects | Dilip Vyas",
+                    "description": "Enterprise projects portfolio with architecture, integration, API, and DevSecOps outcomes.",
+                    "about": {
+                        "@type": "Person",
+                        "name": "Dilip Vyas",
+                        "url": "https://dilipvyas.com/"
+                    }
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://dilipvyas.com/projects.html#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "What kind of projects are included in this portfolio?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The portfolio includes enterprise-scale integration, API modernization, DevSecOps, identity, healthcare data, and platform migration programs."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How should I navigate the project list?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Use the company and technology filters to quickly find relevant case studies by domain and implementation stack."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Do project entries include measurable outcomes?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. Each project includes challenge, architecture approach, technology stack, and impact summary for practical evaluation."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+
 </head>
 
 <body>
@@ -58,6 +108,52 @@
     </section>
 
     <section class="container projects-grid" data-projects-list aria-live="polite">
+
+    </section>
+
+    <section class="answers-section" aria-labelledby="projects-answers-title">
+
+        <div class="container">
+
+            <div class="answers-header" data-animate>
+
+                <span class="answers-tag">Portfolio Answers</span>
+
+                <h2 id="projects-answers-title" class="answers-title">
+                    How To Read These Projects
+                </h2>
+
+                <p class="answers-intro">
+                    The cards are designed for quick evaluation of architecture decisions, implementation depth, and business impact.
+                </p>
+
+            </div>
+
+            <div class="answers-grid">
+
+                <article class="answer-card" data-animate>
+                    <h3>What should I check first?</h3>
+                    <p>Start with challenge and outcome to verify business relevance, then review architecture and technology choices.</p>
+                </article>
+
+                <article class="answer-card" data-animate>
+                    <h3>How do I find domain-specific examples?</h3>
+                    <p>Use Company and Technology filters to narrow down projects aligned with your modernization context.</p>
+                </article>
+
+                <article class="answer-card" data-animate>
+                    <h3>Are these only conceptual examples?</h3>
+                    <p>No. These are delivery-grounded implementations from large-enterprise environments and mission-critical platforms.</p>
+                </article>
+
+                <article class="answer-card" data-animate>
+                    <h3>Can this portfolio support advisory conversations?</h3>
+                    <p>Yes. It can be used as a reference to align architecture options, risk posture, and implementation sequencing.</p>
+                </article>
+
+            </div>
+
+        </div>
 
     </section>
 

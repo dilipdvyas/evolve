@@ -1,0 +1,93 @@
+.festival-greeting-active {
+    overflow: hidden;
+}
+
+.festival-greeting {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    display: grid;
+    place-items: center;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.festival-greeting.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.festival-greeting.is-hiding {
+    animation: festivalGreetingHide .45s ease forwards;
+}
+
+.festival-greeting__backdrop {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(251, 191, 36, 0.26), transparent 22%),
+        radial-gradient(circle at 80% 18%, rgba(249, 115, 22, 0.20), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(220, 38, 38, 0.16), transparent 30%),
+        linear-gradient(180deg, rgba(68, 20, 8, 0.46), rgba(15, 23, 42, 0.82));
+    backdrop-filter: blur(12px);
+}
+
+.festival-greeting__dialog {
+    position: relative;
+    width: 70vw;
+    height: 70vh;
+    display: block;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.festival-greeting__media {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: transparent;
+}
+
+.festival-greeting__image {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
+
+@keyframes festivalGreetingHide {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.98);
+    }
+}
+
+@media (max-width: 720px) {
+    .festival-greeting__dialog {
+        width: 70vw;
+        height: 70vh;
+    }
+
+    .festival-greeting__media {
+        height: 100%;
+        padding: 0.75rem;
+    }
+
+    .festival-greeting__image {
+        max-width: none;
+        max-height: none;
+    }
+}
