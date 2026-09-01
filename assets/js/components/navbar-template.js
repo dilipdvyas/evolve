@@ -75,13 +75,13 @@ const buildSharedNavbarMarkup = () => {
 
                 <span class="logo-symbol">
                     <img src="${prefix}assets/images/dv.png"
-                            alt="Dilip Vyas">
+                            alt="Dilip D Vyas">
                 </span>
 
                 <span class="logo-text">
 
                 <span class="logo-title">
-                    Dilip Vyas
+                    Dilip D Vyas
                 </span>
 
                 <span class="logo-subtitle">
