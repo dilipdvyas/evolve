@@ -20,12 +20,12 @@
 
     "festivalGreeting": {
         "durationMs": 3500,
-        "startDateTime": "2026-08-26T10:00:00",
-        "endDateTime": "2026-08-30T22:00:00",
-        "imagePath": "assets/images/festivals/Rakshabandhan.png",
-        "imageAlt": "Decorative Rakshabandhan greeting illustration",
+        "startDateTime": "2026-09-14T10:00:00",
+        "endDateTime": "2026-09-26T22:00:00",
+        "imagePath": "assets/images/festivals/Ganesha_celebration.png",
+        "imageAlt": "Decorative Ganesha celebration greeting illustration",
         "eyebrow": "Festival greetings",
-        "heading": "Happy Rakshabandhan!!",
+        "heading": "Ganpati Bappa Morya !!",
         "message": "Wishing you and your family light, joy, prosperity, and a season filled with warmth and celebration."
     }
 }
