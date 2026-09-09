@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Knowledge Map | Dilip D Vyas</title>
+
+    <meta name="description" content="Interactive skills knowledge map with category and proficiency insights.">
+    <meta name="theme-color" content="#0F172A">
+
+    <link rel="icon" type="image/png" href="assets/images/dv.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+
+        .knowledge-map-page {
+
+            position: relative;
+            isolation: isolate;
+            min-height: 100vh;
+            padding-top: calc(var(--header-height) + 2.1rem);
+            padding-bottom: 4rem;
+            background:
+                radial-gradient(520px 420px at 10% 8%, rgba(37, 99, 235, 0.14), transparent 72%),
+                radial-gradient(560px 460px at 90% 0%, rgba(16, 185, 129, 0.09), transparent 76%),
+                linear-gradient(180deg, #f8fbff 0%, #ffffff 76%);
+
+        }
+
+        .km-hero {
+
+            margin-bottom: 1.5rem;
+
+        }
+
+        .km-tag {
+
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.42rem 0.82rem;
+            border: 1px solid rgba(37, 99, 235, 0.28);
+            border-radius: 999px;
+            background: #ffffff;
+            color: #1d4ed8;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+
+        }
+
+        .km-title {
+
+            margin-top: 0.95rem;
+            font-size: clamp(2rem, 4.4vw, 3.1rem);
+            line-height: 1.12;
+            color: #0f172a;
+
+        }
+
+        .km-title span {
+
+            color: #1d4ed8;
+
+        }
+
+        .km-intro {
+
+            margin-top: 0.85rem;
+            max-width: 760px;
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.72;
+
+        }
+
+        .km-panel {
+
+            border: 1px solid #e3ebfb;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+            backdrop-filter: blur(4px);
+            padding: 1.2rem;
+
+        }
+
+        .km-controls {
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+        }
+
+        .km-chip-group {
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            align-items: center;
+            padding: 0.38rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            background: #f8fafc;
+
+        }
+
+        .km-chip-label {
+
+            padding: 0 0.45rem;
+            color: #64748b;
+            font-size: 0.81rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+
+        }
+
+        .km-chip-group button {
+
+            border: 1px solid transparent;
+            border-radius: 999px;
+            background: transparent;
+            color: #334155;
+            padding: 0.4rem 0.75rem;
+            font: inherit;
+            font-size: 0.84rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease, background 0.18s ease;
+
+        }
+
+        .km-chip-group button:hover,
+        .km-chip-group button:focus-visible {
+
+            transform: translateY(-1px);
+            border-color: rgba(37, 99, 235, 0.45);
+            color: #1d4ed8;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+
+        }
+
+        .km-chip-group button.active {
+
+            border-color: #1d4ed8;
+            background: #dbeafe;
+            color: #1e3a8a;
+
+        }
+
+        .km-legend {
+
+            margin-bottom: 1.25rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            background: #f8fafc;
+            padding: 0.9rem;
+
+        }
+
+        .km-legend-title {
+
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #0f172a;
+
+        }
+
+        .km-legend-items {
+
+            margin-top: 0.55rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+
+        }
+
+        .km-legend-item {
+
+            display: inline-flex;
+            align-items: center;
+            gap: 0.48rem;
+            color: #475569;
+            font-size: 0.82rem;
+
+        }
+
+        .km-swatch {
+
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 5px;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+
+        }
+
+        .km-categories {
+
+            display: grid;
+            gap: 1.1rem;
+
+        }
+
+        .km-category {
+
+            display: grid;
+            grid-template-columns: 182px 1fr;
+            gap: 0.9rem;
+
+        }
+
+        .km-category-title {
+
+            padding: 0.88rem;
+            border: 1px solid #dce7f8;
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+
+        }
+
+        .km-category-title h2 {
+
+            font-size: 1rem;
+            line-height: 1.22;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+
+        }
+
+        .km-count {
+
+            margin-top: 0.35rem;
+            color: #64748b;
+            font-size: 0.78rem;
+            font-weight: 600;
+
+        }
+
+        .km-skills-grid {
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+            gap: 0.72rem;
+
+        }
+
+        .km-skill {
+
+            position: relative;
+            display: block;
+            min-height: 116px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 0.72rem;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.09);
+            transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+            overflow: hidden;
+            isolation: isolate;
+
+        }
+
+        .km-skill:hover,
+        .km-skill:focus-visible {
+
+            transform: translateY(-2px);
+            filter: brightness(0.99);
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.13);
+
+        }
+
+        .km-skill::after {
+
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+            pointer-events: none;
+
+        }
+
+        .km-skill-inner {
+
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            height: 100%;
+
+        }
+
+        .km-icon {
+
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+
+        }
+
+        .km-icon.circle {
+
+            border-radius: 999px;
+
+        }
+
+        .km-skill-name {
+
+            font-size: 0.84rem;
+            font-weight: 700;
+            line-height: 1.28;
+            word-break: break-word;
+
+        }
+
+        .km-skill-meta {
+
+            margin-top: auto;
+            font-size: 0.75rem;
+            color: rgba(15, 23, 42, 0.72);
+            font-variant-numeric: tabular-nums;
+
+        }
+
+        .km-tooltip {
+
+            position: fixed;
+            z-index: 999;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.12s ease, transform 0.12s ease;
+            max-width: 220px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            background: #0f172a;
+            color: #f8fafc;
+            box-shadow: 0 8px 28px rgba(2, 6, 23, 0.3);
+            padding: 0.65rem 0.72rem;
+            font-size: 0.75rem;
+            line-height: 1.4;
+
+        }
+
+        .km-tooltip.show {
+
+            opacity: 1;
+            transform: translateY(0);
+
+        }
+
+        .km-tooltip-title {
+
+            font-weight: 700;
+            margin-bottom: 0.22rem;
+
+        }
+
+        .km-tooltip-line {
+
+            color: #cbd5e1;
+
+        }
+
+        .hidden {
+
+            display: none !important;
+
+        }
+
+        @media (max-width: 980px) {
+
+            .km-category {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .km-category-title {
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.8rem;
+
+            }
+
+            .km-count {
+
+                margin-top: 0;
+
+            }
+
+        }
+
+        @media (max-width: 720px) {
+
+            .knowledge-map-page {
+
+                padding-top: calc(var(--header-height) + 1.25rem);
+
+            }
+
+            .km-panel {
+
+                padding: 0.88rem;
+                border-radius: 16px;
+
+            }
+
+            .km-controls {
+
+                justify-content: flex-start;
+
+            }
+
+            .km-chip-group {
+
+                width: 100%;
+
+            }
+
+            .km-skills-grid {
+
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            }
+
+            .km-skill {
+
+                min-height: 104px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="site-header"></header>
+
+    <main class="knowledge-map-page">
+
+        <section class="container km-hero" data-animate>
+
+            <span class="km-tag">Knowledge Map</span>
+
+            <h1 class="km-title">
+                Technical Skills
+                <span>Heatmap</span>
+            </h1>
+
+            <p class="km-intro">
+                Explore capabilities across engineering domains. Use filters to focus by category and switch colors to compare proficiency and years of experience.
+            </p>
+
+        </section>
+
+        <section class="container km-panel" data-animate>
+
+            <div class="km-controls">
+
+                <div class="km-chip-group" id="categoryFilters" aria-label="Category filters">
+                    <span class="km-chip-label">Filter</span>
+                    <button class="active" data-filter="all" type="button">All</button>
+                    <button data-filter="Languages" type="button">Languages</button>
+                    <button data-filter="Frameworks" type="button">Frameworks</button>
+                    <button data-filter="Databases" type="button">Databases</button>
+                    <button data-filter="Cloud &amp; DevOps" type="button">Cloud and DevOps</button>
+                    <button data-filter="Concepts/Fundamentals" type="button">Concepts</button>
+                </div>
+
+                <div class="km-chip-group" id="metricToggle" aria-label="Metric toggle">
+                    <span class="km-chip-label">Color By</span>
+                    <button class="active" data-metric="proficiency" type="button">Proficiency</button>
+                    <button data-metric="years" type="button">Experience</button>
+                </div>
+
+            </div>
+
+            <div class="km-legend" id="legendCard">
+                <div class="km-legend-title">Legend - Proficiency Level</div>
+                <div class="km-legend-items">
+                    <div class="km-legend-item"><span class="km-swatch" style="background:#dbeafe"></span>Beginner</div>
+                    <div class="km-legend-item"><span class="km-swatch" style="background:#93c5fd"></span>Intermediate</div>
+                    <div class="km-legend-item"><span class="km-swatch" style="background:#3b82f6"></span>Advanced</div>
+                    <div class="km-legend-item"><span class="km-swatch" style="background:#1e3a8a"></span>Expert</div>
+                </div>
+            </div>
+
+            <div class="km-categories" id="categories">
+
+                <section class="km-category" data-category="Languages">
+                    <div class="km-category-title">
+                        <h2>Languages</h2>
+                        <div class="km-count">6 skills</div>
+                    </div>
+                    <div class="km-skills-grid">
+                        <div class="km-skill" data-category="Languages" data-name="JavaScript" data-proficiency="Expert" data-years="7">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#f7df1e;color:#111827;">JS</div>
+                                <div class="km-skill-name">JavaScript</div>
+                                <div class="km-skill-meta">Expert - 7 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Languages" data-name="TypeScript" data-proficiency="Advanced" data-years="5">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#3178c6;">TS</div>
+                                <div class="km-skill-name">TypeScript</div>
+                                <div class="km-skill-meta">Advanced - 5 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Languages" data-name="Python" data-proficiency="Expert" data-years="8">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#3776ab;">PY</div>
+                                <div class="km-skill-name">Python</div>
+                                <div class="km-skill-meta">Expert - 8 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Languages" data-name="Java" data-proficiency="Intermediate" data-years="3">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#b07219;">JV</div>
+                                <div class="km-skill-name">Java</div>
+                                <div class="km-skill-meta">Intermediate - 3 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Languages" data-name="Go" data-proficiency="Intermediate" data-years="2">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#00add8;">Go</div>
+                                <div class="km-skill-name">Go</div>
+                                <div class="km-skill-meta">Intermediate - 2 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Languages" data-name="SQL" data-proficiency="Advanced" data-years="6">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#6b7280;">SQL</div>
+                                <div class="km-skill-name">SQL</div>
+                                <div class="km-skill-meta">Advanced - 6 yrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="km-category" data-category="Frameworks">
+                    <div class="km-category-title">
+                        <h2>Frameworks</h2>
+                        <div class="km-count">7 skills</div>
+                    </div>
+                    <div class="km-skills-grid">
+                        <div class="km-skill" data-category="Frameworks" data-name="React" data-proficiency="Expert" data-years="6">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#61dafb;color:#111827;">RC</div>
+                                <div class="km-skill-name">React</div>
+                                <div class="km-skill-meta">Expert - 6 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Frameworks" data-name="Next.js" data-proficiency="Advanced" data-years="4">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#111827;">NX</div>
+                                <div class="km-skill-name">Next.js</div>
+                                <div class="km-skill-meta">Advanced - 4 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Frameworks" data-name="Node.js" data-proficiency="Expert" data-years="7">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#3c873a;">ND</div>
+                                <div class="km-skill-name">Node.js</div>
+                                <div class="km-skill-meta">Expert - 7 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Frameworks" data-name="Express" data-proficiency="Advanced" data-years="5">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#4b5563;">EX</div>
+                                <div class="km-skill-name">Express</div>
+                                <div class="km-skill-meta">Advanced - 5 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Frameworks" data-name="Django" data-proficiency="Advanced" data-years="4">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#0f5132;">DJ</div>
+                                <div class="km-skill-name">Django</div>
+                                <div class="km-skill-meta">Advanced - 4 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Frameworks" data-name="GraphQL" data-proficiency="Intermediate" data-years="3">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#e10098;">GQ</div>
+                                <div class="km-skill-name">GraphQL</div>
+                                <div class="km-skill-meta">Intermediate - 3 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Frameworks" data-name="Tailwind CSS" data-proficiency="Advanced" data-years="4">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#06b6d4;">TW</div>
+                                <div class="km-skill-name">Tailwind CSS</div>
+                                <div class="km-skill-meta">Advanced - 4 yrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="km-category" data-category="Databases">
+                    <div class="km-category-title">
+                        <h2>Databases</h2>
+                        <div class="km-count">6 skills</div>
+                    </div>
+                    <div class="km-skills-grid">
+                        <div class="km-skill" data-category="Databases" data-name="PostgreSQL" data-proficiency="Advanced" data-years="5">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#336791;">PG</div>
+                                <div class="km-skill-name">PostgreSQL</div>
+                                <div class="km-skill-meta">Advanced - 5 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Databases" data-name="MongoDB" data-proficiency="Advanced" data-years="4">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#13aa52;">MG</div>
+                                <div class="km-skill-name">MongoDB</div>
+                                <div class="km-skill-meta">Advanced - 4 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Databases" data-name="Redis" data-proficiency="Intermediate" data-years="3">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#dc382d;">RD</div>
+                                <div class="km-skill-name">Redis</div>
+                                <div class="km-skill-meta">Intermediate - 3 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Databases" data-name="MySQL" data-proficiency="Advanced" data-years="6">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#00758f;">MY</div>
+                                <div class="km-skill-name">MySQL</div>
+                                <div class="km-skill-meta">Advanced - 6 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Databases" data-name="Elasticsearch" data-proficiency="Intermediate" data-years="2">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#f59e0b;">ES</div>
+                                <div class="km-skill-name">Elasticsearch</div>
+                                <div class="km-skill-meta">Intermediate - 2 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Databases" data-name="Firebase" data-proficiency="Intermediate" data-years="2">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#ffca28;color:#111827;">FB</div>
+                                <div class="km-skill-name">Firebase</div>
+                                <div class="km-skill-meta">Intermediate - 2 yrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="km-category" data-category="Cloud &amp; DevOps">
+                    <div class="km-category-title">
+                        <h2>Cloud and DevOps</h2>
+                        <div class="km-count">6 skills</div>
+                    </div>
+                    <div class="km-skills-grid">
+                        <div class="km-skill" data-category="Cloud &amp; DevOps" data-name="AWS" data-proficiency="Advanced" data-years="5">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#ff9900;color:#111827;">AWS</div>
+                                <div class="km-skill-name">AWS</div>
+                                <div class="km-skill-meta">Advanced - 5 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Cloud &amp; DevOps" data-name="Docker" data-proficiency="Advanced" data-years="4">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#2496ed;">DK</div>
+                                <div class="km-skill-name">Docker</div>
+                                <div class="km-skill-meta">Advanced - 4 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Cloud &amp; DevOps" data-name="Kubernetes" data-proficiency="Intermediate" data-years="2">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#326ce5;">K8S</div>
+                                <div class="km-skill-name">Kubernetes</div>
+                                <div class="km-skill-meta">Intermediate - 2 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Cloud &amp; DevOps" data-name="CI/CD" data-proficiency="Advanced" data-years="5">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#6b7280;">CI</div>
+                                <div class="km-skill-name">CI/CD</div>
+                                <div class="km-skill-meta">Advanced - 5 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Cloud &amp; DevOps" data-name="Terraform" data-proficiency="Intermediate" data-years="2">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#7b42bc;">TF</div>
+                                <div class="km-skill-name">Terraform</div>
+                                <div class="km-skill-meta">Intermediate - 2 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Cloud &amp; DevOps" data-name="Linux" data-proficiency="Expert" data-years="8">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#111827;">LX</div>
+                                <div class="km-skill-name">Linux</div>
+                                <div class="km-skill-meta">Expert - 8 yrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="km-category" data-category="Concepts/Fundamentals">
+                    <div class="km-category-title">
+                        <h2>Concepts and Fundamentals</h2>
+                        <div class="km-count">7 skills</div>
+                    </div>
+                    <div class="km-skills-grid">
+                        <div class="km-skill" data-category="Concepts/Fundamentals" data-name="System Design" data-proficiency="Advanced" data-years="5">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#1e40af;">SD</div>
+                                <div class="km-skill-name">System Design</div>
+                                <div class="km-skill-meta">Advanced - 5 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Concepts/Fundamentals" data-name="OOP" data-proficiency="Expert" data-years="8">
+                            <div class="km-skill-inner">
+                                <div class="km-icon circle" style="background:#4338ca;">OOP</div>
+                                <div class="km-skill-name">OOP</div>
+                                <div class="km-skill-meta">Expert - 8 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Concepts/Fundamentals" data-name="Data Structures" data-proficiency="Advanced" data-years="6">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#0f766e;">DS</div>
+                                <div class="km-skill-name">Data Structures</div>
+                                <div class="km-skill-meta">Advanced - 6 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Concepts/Fundamentals" data-name="Algorithms" data-proficiency="Advanced" data-years="6">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#1d4ed8;">AL</div>
+                                <div class="km-skill-name">Algorithms</div>
+                                <div class="km-skill-meta">Advanced - 6 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Concepts/Fundamentals" data-name="REST APIs" data-proficiency="Expert" data-years="7">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#0284c7;">API</div>
+                                <div class="km-skill-name">REST APIs</div>
+                                <div class="km-skill-meta">Expert - 7 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Concepts/Fundamentals" data-name="Microservices" data-proficiency="Advanced" data-years="4">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#6d28d9;">MS</div>
+                                <div class="km-skill-name">Microservices</div>
+                                <div class="km-skill-meta">Advanced - 4 yrs</div>
+                            </div>
+                        </div>
+                        <div class="km-skill" data-category="Concepts/Fundamentals" data-name="Testing" data-proficiency="Advanced" data-years="5">
+                            <div class="km-skill-inner">
+                                <div class="km-icon" style="background:#059669;">TST</div>
+                                <div class="km-skill-name">Testing</div>
+                                <div class="km-skill-meta">Advanced - 5 yrs</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="km-tooltip" id="tooltip" role="tooltip" aria-hidden="true"></div>
+
+    <script type="module" src="assets/js/main.js"></script>
+
+    <script>
+
+        (function () {
+
+            const skills = Array.from(document.querySelectorAll(".km-skill"));
+            const categoryButtons = Array.from(document.querySelectorAll("#categoryFilters button"));
+            const metricButtons = Array.from(document.querySelectorAll("#metricToggle button"));
+            const categories = Array.from(document.querySelectorAll(".km-category"));
+            const tooltip = document.getElementById("tooltip");
+            const legendCard = document.getElementById("legendCard");
+
+            let currentFilter = "all";
+            let currentMetric = "proficiency";
+
+            const profColors = {
+                Beginner: "#dbeafe",
+                Intermediate: "#93c5fd",
+                Advanced: "#3b82f6",
+                Expert: "#1e3a8a"
+            };
+
+            const yearsColors = {
+                1: "#ecfdf5",
+                2: "#d1fae5",
+                3: "#a7f3d0",
+                4: "#6ee7b7",
+                5: "#34d399",
+                6: "#10b981",
+                7: "#059669",
+                8: "#065f46"
+            };
+
+            function textColorFor(backgroundHex) {
+
+                const hex = backgroundHex.replace("#", "");
+                const bigint = parseInt(hex, 16);
+                const red = (bigint >> 16) & 255;
+                const green = (bigint >> 8) & 255;
+                const blue = bigint & 255;
+                const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
+
+                return luminance > 0.62 ? "#0f172a" : "#ffffff";
+
+            }
+
+            function renderLegend() {
+
+                if (currentMetric === "proficiency") {
+
+                    legendCard.innerHTML = `
+                        <div class="km-legend-title">Legend - Proficiency Level</div>
+                        <div class="km-legend-items">
+                            <div class="km-legend-item"><span class="km-swatch" style="background:${profColors.Beginner}"></span>Beginner</div>
+                            <div class="km-legend-item"><span class="km-swatch" style="background:${profColors.Intermediate}"></span>Intermediate</div>
+                            <div class="km-legend-item"><span class="km-swatch" style="background:${profColors.Advanced}"></span>Advanced</div>
+                            <div class="km-legend-item"><span class="km-swatch" style="background:${profColors.Expert}"></span>Expert</div>
+                        </div>
+                    `;
+
+                    return;
+
+                }
+
+                legendCard.innerHTML = `
+                    <div class="km-legend-title">Legend - Years of Experience</div>
+                    <div class="km-legend-items">
+                        <div class="km-legend-item"><span class="km-swatch" style="background:${yearsColors[1]}"></span>1-2 years</div>
+                        <div class="km-legend-item"><span class="km-swatch" style="background:${yearsColors[3]}"></span>3 years</div>
+                        <div class="km-legend-item"><span class="km-swatch" style="background:${yearsColors[4]}"></span>4 years</div>
+                        <div class="km-legend-item"><span class="km-swatch" style="background:${yearsColors[5]}"></span>5 years</div>
+                        <div class="km-legend-item"><span class="km-swatch" style="background:${yearsColors[6]}"></span>6 years</div>
+                        <div class="km-legend-item"><span class="km-swatch" style="background:${yearsColors[8]}"></span>7-8 years</div>
+                    </div>
+                `;
+
+            }
+
+            function applyMetric() {
+
+                skills.forEach((skill) => {
+
+                    const proficiency = skill.dataset.proficiency;
+                    const years = Number(skill.dataset.years);
+                    const background = currentMetric === "proficiency"
+                        ? profColors[proficiency]
+                        : yearsColors[years];
+                    const textColor = textColorFor(background);
+
+                    skill.style.background = background;
+                    skill.style.color = textColor;
+
+                    const meta = skill.querySelector(".km-skill-meta");
+
+                    if (meta) {
+                        meta.style.color = textColor === "#ffffff" ? "rgba(255,255,255,0.84)" : "rgba(15,23,42,0.72)";
+                    }
+
+                });
+
+                renderLegend();
+
+            }
+
+            function applyFilter() {
+
+                categories.forEach((section) => {
+
+                    const category = section.dataset.category;
+                    const shouldShow = currentFilter === "all" || currentFilter === category;
+
+                    section.classList.toggle("hidden", !shouldShow);
+
+                });
+
+            }
+
+            function showTooltip(event, element) {
+
+                const name = element.dataset.name;
+                const proficiency = element.dataset.proficiency;
+                const years = Number(element.dataset.years);
+
+                tooltip.innerHTML = `
+                    <div class="km-tooltip-title">${name}</div>
+                    <div class="km-tooltip-line">Proficiency: ${proficiency}</div>
+                    <div class="km-tooltip-line">Experience: ${years} year${years === 1 ? "" : "s"}</div>
+                `;
+
+                tooltip.classList.add("show");
+                tooltip.setAttribute("aria-hidden", "false");
+                moveTooltip(event);
+
+            }
+
+            function moveTooltip(event) {
+
+                const pad = 14;
+                const rect = tooltip.getBoundingClientRect();
+
+                let x = event.clientX + 14;
+                let y = event.clientY + 14;
+
+                if (x + rect.width + pad > window.innerWidth) {
+                    x = event.clientX - rect.width - 14;
+                }
+
+                if (y + rect.height + pad > window.innerHeight) {
+                    y = event.clientY - rect.height - 14;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+
+            }
+
+            function hideTooltip() {
+
+                tooltip.classList.remove("show");
+                tooltip.setAttribute("aria-hidden", "true");
+
+            }
+
+            categoryButtons.forEach((button) => {
+
+                button.addEventListener("click", () => {
+
+                    categoryButtons.forEach((item) => item.classList.remove("active"));
+                    button.classList.add("active");
+
+                    currentFilter = button.dataset.filter;
+                    applyFilter();
+
+                });
+
+            });
+
+            metricButtons.forEach((button) => {
+
+                button.addEventListener("click", () => {
+
+                    metricButtons.forEach((item) => item.classList.remove("active"));
+                    button.classList.add("active");
+
+                    currentMetric = button.dataset.metric;
+                    applyMetric();
+
+                });
+
+            });
+
+            skills.forEach((skill) => {
+
+                skill.addEventListener("mouseenter", (event) => showTooltip(event, skill));
+                skill.addEventListener("mousemove", moveTooltip);
+                skill.addEventListener("mouseleave", hideTooltip);
+                skill.addEventListener("focus", (event) => showTooltip(event, skill));
+                skill.addEventListener("blur", hideTooltip);
+                skill.setAttribute("tabindex", "0");
+
+            });
+
+            applyMetric();
+            applyFilter();
+
+        })();
+
+    </script>
+
+</body>
+
+</html>
