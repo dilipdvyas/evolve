@@ -23,6 +23,18 @@ const formatDateLabel = (value) => {
 
 const normalize = (value) => String(value || "").trim();
 
+const isMajorProject = (project) => {
+
+    const value = parseFloat(project.srNo);
+
+    return !Number.isNaN(value) && Math.abs(value - Math.round(value)) < 1e-9;
+
+};
+
+const sortBySrNoDescending = (projects) => [...projects].sort(
+    (a, b) => parseFloat(b.srNo) - parseFloat(a.srNo)
+);
+
 const toSafeId = (value) => normalize(value)
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
@@ -209,7 +221,8 @@ export const initProjectsGallery = async () => {
     }
 
     const payload = await DataService.load("projects");
-    const projects = Array.isArray(payload?.projects) ? payload.projects : [];
+    const allProjects = Array.isArray(payload?.projects) ? payload.projects : [];
+    const projects = sortBySrNoDescending(allProjects.filter(isMajorProject));
 
     const companies = getUniqueValues(projects, (project) => project.organization);
     const technologies = getUniqueValues(projects, (project) => project.technology || []);

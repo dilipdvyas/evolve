@@ -235,6 +235,7 @@
       "to": "2002-08-31",
       "domain": "Health Care",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/medical-data-management-system.html",
       "technology": [
         "ASP.NET"
       ]
@@ -336,6 +337,7 @@
       "to": "2007-02-28",
       "domain": "Platform/Framework",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/sap2sql-etl-tool.html",
       "technology": [
         "ASP.NET"
       ]
@@ -358,6 +360,7 @@
       "to": "2009-11-30",
       "domain": "Human Resouce",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/hr-information-dashboard.html",
       "technology": [
         "ASP.NET"
       ]
@@ -424,6 +427,7 @@
       "to": "2019-12-01",
       "domain": "Integration Platform",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/tibco-business-transformation.html",
       "technology": [
         "TIBCO"
       ]
@@ -435,6 +439,7 @@
       "to": "2022-03-01",
       "domain": "Integration Platform",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/tibco-to-opensource-migration.html",
       "technology": [
         "TIBCO",
         "Spring",
@@ -462,6 +467,7 @@
       "to": "2022-06-01",
       "domain": "API Gateay",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/wso2-api-manager-identity-server.html",
       "technology": [
         "WSO2",
         "k8s"
