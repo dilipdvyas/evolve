@@ -20,12 +20,12 @@
 
     "festivalGreeting": {
         "durationMs": 3500,
-        "startDateTime": "2026-09-14T10:00:00",
-        "endDateTime": "2026-09-26T22:00:00",
-        "imagePath": "assets/images/festivals/Ganesha_celebration.jpeg",
-        "imageAlt": "Decorative Ganesha celebration greeting illustration",
+        "startDateTime": "2026-10-11T10:00:00",
+        "endDateTime": "2026-10-20T22:00:00",
+        "imagePath": "assets/images/festivals/HappyNavratri.png",
+        "imageAlt": "Decorative Navratri celebration greeting illustration",
         "eyebrow": "Festival greetings",
-        "heading": "Ganpati Bappa Morya !!",
+        "heading": "Happy Navratri !!",
         "message": "Wishing you and your family light, joy, prosperity, and a season filled with warmth and celebration."
     }
 }
