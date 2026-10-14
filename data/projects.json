@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28",
+  "updatedAt": "2026-10-14",
   "count": 45,
   "projects": [
     {
@@ -123,9 +123,11 @@
       "to": "1999-01-31",
       "domain": "Human Resouce",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/human-resource-management-system.html",
       "technology": [
-        "FoxPro",
-        "Visual Basic"
+        "Visual Basic 5.0",
+        "Crystal Reports 6.0",
+        "SQL Server 7.0"
       ]
     },
     {
@@ -135,9 +137,11 @@
       "to": "2002-03-31",
       "domain": "Human Resouce",
       "organization": "Reliance Industries Ltd.",
+      "link": "articles/human-resource-management-system.html",
       "technology": [
-        "FoxPro",
-        "Visual Basic"
+        "Visual Basic 5.0",
+        "Crystal Reports 6.0",
+        "SQL Server 7.0"
       ]
     },
     {
