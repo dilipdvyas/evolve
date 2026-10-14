@@ -255,6 +255,18 @@
 
 }
 
+a.timeline-link{
+
+    display:block;
+
+    color:inherit;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+}
+
 .timeline-tech{
 
     display:inline-block;
