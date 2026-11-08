@@ -20,12 +20,12 @@
 
     "festivalGreeting": {
         "durationMs": 3500,
-        "startDateTime": "2026-11-06T05:00:00",
-        "endDateTime": "2026-11-07T01:00:00",
-        "imagePath": "assets/images/festivals/dhan.png",
-        "imageAlt": "Decorative Navratri celebration greeting illustration",
+        "startDateTime": "2026-11-07T05:00:00",
+        "endDateTime": "2026-11-08T23:55:00",
+        "imagePath": "assets/images/festivals/diwali.png",
+        "imageAlt": "Decorative Diwali celebration greeting illustration",
         "eyebrow": "Festival greetings",
-        "heading": "Happy Dhanteras !!",
+        "heading": "Happy Diwali !!",
         "message": "Wishing you and your family light, joy, prosperity, and a season filled with warmth and celebration."
     }
 }
