@@ -20,9 +20,9 @@
 
     "festivalGreeting": {
         "durationMs": 3500,
-        "startDateTime": "2026-11-07T05:00:00",
-        "endDateTime": "2026-11-08T23:55:00",
-        "imagePath": "assets/images/festivals/diwali.png",
+        "startDateTime": "2026-11-09T05:00:00",
+        "endDateTime": "2026-11-11T23:55:00",
+        "imagePath": "assets/images/festivals/navuvarsh.png",
         "imageAlt": "Decorative Diwali celebration greeting illustration",
         "eyebrow": "Festival greetings",
         "heading": "Happy Diwali !!",
